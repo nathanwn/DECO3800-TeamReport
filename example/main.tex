@@ -1,0 +1,37 @@
+\documentclass[12pt, a4paper]{article}
+
+% === MARGINS ===
+\usepackage[margin=0.75in]{geometry}
+
+
+% === INDENTATION ===
+\usepackage{indentfirst}
+
+
+% === REFERENCE ===
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes,xpatch} % recommended
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=blue
+}
+
+\usepackage[
+    backend=biber,
+    style=ieee,
+]{biblatex}
+
+\addbibresource{ref.bib}
+
+
+\begin{document}
+
+  \par Paragraph 1 \cite{HomeAdvisor}
+  \par Paragraph 2 \cite{UN_Ageing}
+
+\printbibliography
+
+\end{document}
