@@ -1,0 +1,26 @@
+# By-product files
+*.aux
+*.log
+*.pdf
+*.out
+*.toc
+*.dvi
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Shell scripts
+*.sh
+
+# Makefiles
+Makefile
+
+# Others
+*.py
+*.pyc
+
+# MacOS
+.DS_Store
+
+# vscode
+.vscode

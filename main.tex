@@ -1,0 +1,111 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+% === MARGINS ===
+\usepackage[margin=0.75in]{geometry}
+
+% === INLINE FONT SIZE ADJUSTMENT ===
+\usepackage{anyfontsize}
+
+% === DATE & TIME FORMATTING ===
+\usepackage{datetime}
+
+% === IMAGE ===
+\usepackage{graphicx}
+\graphicspath{{./img/}}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcommand{\img}[3][]
+{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[#1]{#2}
+    \caption*{#3}
+  \end{figure}
+}
+% Usage: \img[width=...]{<path_to_img>}{<caption>}
+
+% === HEADER & FOOTER ===
+\usepackage{fancyhdr}
+% Header & Footer for all pages
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Problem Identification}
+\lfoot{Team United}
+\rfoot{\thepage}
+
+% === INDENTATION ===
+\usepackage{indentfirst}
+
+% === TABLE OF CONTENTS ===
+% links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks
+}
+\newcommand{\setlinkcolor}[1]{
+  \hypersetup{
+    citecolor=#1,
+    urlcolor=#1,
+    filecolor=#1,
+    linkcolor=#1
+  }
+}
+
+% === REFERENCE ===
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes,xpatch} % recommended
+\usepackage{url}
+% \usepackage{hyperref}
+
+\usepackage[
+    backend=biber,
+    style=authoryear-ibid,
+]{biblatex}
+\addbibresource{ref.bib}
+
+% === APPENDICES ===
+\usepackage[toc, page]{appendix}
+
+% === INCLUDE PAGES FROM OTHER PDF FILES ===
+\usepackage{pdfpages}
+
+% === LANDSCAPE PAGES ===
+\usepackage{lscape}
+
+% === ROTATING IMAGES ===
+\usepackage{rotating}
+
+% === BULLETS INSIDE TABULAR ===
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% === ENUMERATE ===
+\usepackage[shortlabels]{enumitem}
+% Usage: \begin{enumerate}[a.] or [a)] or [(A)] etc.
+
+
+\begin{document}
+
+\input{cover}
+    \setlinkcolor{black}
+\input{toc}
+    \setlinkcolor{blue}
+\input{title}
+\input{introduction}
+\input{overview}
+\input{background}
+\input{stakeholders}
+\input{conceptual-model}
+\input{questions}
+\input{prototype}
+\input{plan}
+\input{appendices}
+
+\newpage
+\printbibliography
+
+\end{document}
