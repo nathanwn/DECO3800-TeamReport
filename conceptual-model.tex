@@ -1,34 +1,68 @@
 \section{Conceptual Model}
-  \subsection{One Sentence Problem Statement}
-    \par Design and develop an application to be installed on a mobile device that tracks who the user has been in close contact with and where the user has been to assist the health authorities with the process of disease contact tracing.
-  \subsection{High-level Description of the System}
-    \par The system will:
-    \begin{itemize}
-      \item tracks who the user has been in contact within the last x days, where x depends on the particular disease
-      \item tracks where the user has been to within the last x days, where x depends on the particular disease
-      \item when a user is discovered to have the disease, provides the health authorities with the user's data to do contact tracing provides a mean for the health authorities to contact people who are at high risk of having the disease and extract further information from them using the Q\&A form
-      \item provides data for the health authorities to categorize users into high-risk group and low-risk group
-      \item provides a mean for the health authorities to inform the community about the latest updates of the disease, how to stay safe, what to do in case of an emergency, etc.
-    \end{itemize}
-  \subsection{Interaction Paradigms}
-    \begin{itemize}
-      \item Mobile: the application is installed on mobile phone
-      \item Ubiquitous computing: when doing contact tracing, the system works in the background and does not require any interaction with the user
-    \end{itemize}
+  \subsection{System Concept Statement}
+    \subsubsection{One Sentence Problem Statement}
+      \par Design and develop an application to be installed on a mobile device that does contact tracing and facilitates the user-business-government model, and at the same time provide them with genuine information of the pandemic, help them make better decisions, provide them with a channel to reach out to organizations providing support during lockdown, and to communicate with the health department in case they are potentially infected.
 
-  \subsection{Interaction Modes}
-    \begin{itemize}
-      \item \textbf{Exploring \& Browsing}:
+    \subsubsection{High-level Description of the System}
+      \par The system will:
+      \begin{itemize}
+        \item conduct contact tracing - this includes:
         \begin{itemize}
-          \item be informed about where should not go to
-          \item get notified by the health authorities when having a high chance of getting the disease
+          \item tracking who the user has been in contact within the last 14 days
+          \item tracking the public places that the user has been to within the last 14 days
+          \item notifying people who has come in close contact with a confirmed case so that they can deliberately contact the health department for testing
         \end{itemize}
-      \item \textbf{Instructing}:
-        \begin{itemize}
-          \item The users need to fill in a Q\&A form within the app when the health authorities needs to extract further information from them
-          \item Having functionalities to support the elderly and the disabled people.
-        \end{itemize}
-    \end{itemize}
+        \item provide a platform that can support the user-business-government cooperation model, by tracking people who have entered a public business place
+        \item provide a platform for the health authorities to inform the community about the latest updates of the disease, how to stay safe, what to do in case of an emergency, etc.
+        \item provide a platform for the health authorities to extract further information from people who are potentially infected with the virus
+        \item provide a fun and educational experience for the user to learn about the pandemic situation and help them make better decision with pandemic simulations
+        \item provide a platform for organizations to provide support during lockdown for people in need
+      \end{itemize}
 
-  \subsection{Key Interface Metaphors}
-    \par At the current iteration, the user interface is mostly text-based.
+    \subsubsection{Interaction Paradigms}
+      \begin{itemize}
+        \item Mobile: the application is installed on mobile phone
+        \item Ubiquitous computing: when doing contact tracing, the system works in the background and does not require any interaction with the user
+      \end{itemize}
+
+    \subsubsection{Interaction Modes}
+      \begin{itemize}
+        \item \textbf{Exploring \& Browsing}:
+          \begin{itemize}
+            \item The user gets to know more about the pandemic situation through information provided by the health authorities.
+            \item The user is advised with recreational activities during lockdown.
+            \item The user gets to know organizations that provide support during lockdown. 
+          \end{itemize}
+        \item \textbf{Instructing}:
+          \begin{itemize}
+            \item The users need to fill in a Q\&A form within the app when the health authorities needs to extract further information from them \textbf{in case they have already come into close contact with a confirmed case}.
+            \item Having functionalities to support the elderly and the disabled people.
+          \end{itemize}
+      \end{itemize}
+    
+  \subsection{Design Guidelines}
+    \subsubsection{UI/UX}
+      \begin{itemize}
+        \item The application should provide up-to-date and genuine information about the pandemic situation, while at the same time not causing unnecessary anxiety among the community.
+        \item The simulation functionality needs to be fun and interactive in order to encourage people to learn about the pandemic and to make better decision in the pandemic situation.
+      \end{itemize}
+
+    \subsubsection{User Privacy}
+      \begin{itemize}
+        \item The system only collects minimal user data in order to function properly for the purpose of contact tracing.
+        \item The system needs to be transparent about what data will be collected, and how data will be collected, stored, and used.
+        \item The system has to allow user to decide and select what kind of data that they will share.
+      \end{itemize}
+    
+    \subsubsection{Ubiquity}
+      \begin{itemize}
+        \item Pervasiveness: The application should be fully functional on most mobile devices currently in use.
+        \item Scalability: The system should be able to support millions (or even billions) of users.
+      \end{itemize}
+    
+    \subsubsection{Information Security}
+      \begin{itemize}
+        \item The system have to strictly follow standard security guidelines of the industry.
+        \item The system have to protect user from exposing their data to potential threats.
+        \item The system will be open-sourced so that security issues can be detected as soon as possible.
+      \end{itemize}
