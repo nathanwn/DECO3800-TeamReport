@@ -1,9 +1,44 @@
 \section{Plan}
-  \subsection{Possible Privacy-Preserving Laws/Technologies}
-    \par User privacy is a fundamental human right. Coercing people into turning the GPS on and granting their Location access to the third-party application all the time is not the right thing to do. One of the proposed solutions is convincing users that all collected data will be encrypted and send to the Government only, anyone else, even though developers cannot know exactly where they are and where they were.
-  \subsection{Accuracy of Technologies}
-    \par Since the behavior of the virus varies depending on different conditions (e.g. type of surface, temperature or humidity of the environment) \parencite{Plan3}, it is an arduous task to know exactly how long the virus lasts outside the host. A solution for this is when knowing that an infected person went to a specific place in the past, the mobile application would push notification to all the people within 5 kilometers radius with real-time tracking since the day that infected person came to until 72 hours later \parencite{Plan4}. Hence, all notified people would raise the awareness of limiting on surface touching and regularly washing their hands with an alcohol-based hand rub or wash them with soap and water.
-    \par According to a study published last year \parencite{Plan1}, a phone is typically able to determine its position with an accuracy between 7 and 13 meters in urban areas. However, it is recommended that people should keep 1.5 meters away from others as much as possible is one of the ways proposed by Social distancing (also called physical distancing) to help slow the spread of viruses \parencite{Plan2}. Therefore, the accuracy of the GPS of a mobile phone radically affects the results of distancing among people even though they are not in that close contact with each other (within 1.5 meters). In order to tackle this problem, what our application could do is sending the data to the Government only then they would decide how these data might be handled: Maybe they would do nothing, or give warning to the people who were in close contact with the infected person about quarantining at home in 14 days. Furthermore, cooperating with third-party services such as Translink would make a great contribution to the tracking system of our project. For instance, if there was a person who was infected with COVID-19 came to a bus, Translink could get access to his/her Go card in order to track which bus they took in recent days then the company would sterilize that specific bus and send back information to us to notify all associated people who took the same bus with the COVID-19 patient. Another feasible solution to tackle the problem of accuracy is by using short-range Bluetooth signals from other’s smartphones. The biggest advantage of this application compared to other existing ones is the combination of location services and Bluetooth signals. With GPS, the system can track the areas where the person who tested positive for the virus came with the purpose of minimizing the spread of the virus outside the host. Moreover, thanks to Bluetooth, the system could identify people who were in close contact with that patient and then push a notification to them about what to do next. Supposing when a person is required to self-quarantine at home, the application would frequently interact with that person via Q\&A sections and provide emergency contact to medical services in case of unwell health conditions. In addition, the GPS, as well as Bluetooth signal, are needed to be accessed all the time, included in and after lockdown to reduce the pandemic outbreak.
-  \subsection{Conclusion}
-    \par The purpose of this application is health communication. However, location accessibility is the key to the success of this application. Our application could be gotten the most to prevent the pandemic if there were cooperation among inhabitants to get access to their location for real-time tracking. The situation was put on high alert if there was a person who infected with COVID-19 did not turn GPS and Location Services on their mobile phone and then entered public places (e.g. Supermarket, City center). In consequence, whoever entered those places within 3 days might acquire the virus after touching contaminated objects or surfaces.
+  \subsection{How to answer the identified questions:}
+    \subsubsection{Privacy}
+      \par For users to compromise, we must come up with a solution that can protect their privacy while having enough data and resources to function properly.
+      \par To protect user privacy, there are two different processes that need to be taken care of: gathering data and storing data. Applying the wrong approach will not only discourage the use of the app but also leave the system at risk of security threats.
+      \par For the time being, we will do some more research on how similar applications gather and store data (not just at a high level, but rather a bit closer to the implementation side), then compare between the pros and cons of each approach. We will also look for some standard privacy guidelines of the software industry, and later come up with a guideline for our system. The intention is to help decide which approach will be the best fit for our application given all the criteria.
+      \par Take a closer look and get a better understanding of the functionality of COVIDSafe application \parencite{CovidSafe} in order to improve our system.
+    \subsubsection{Accuracy}
+      \par The application that our group proposing currently can solve the problem of accuracy by combining two existing technologies, including Bluetooth signal and QR Code. However, for open space areas such as parks, beaches, the solution of using the QR Code seems to be infeasible.
+      \par There are two ways that we took into account in order to find the solution for this problem in the next iteration:
+        \begin{itemize}
+          \item Researching and discussing more to get a better solution.
+          \item Open space areas are owned by the Government. For that reason, the Government should close unessential places such as beaches or monitored these places with high frequency to make sure that people adhere to Social Distancing.
+        \end{itemize}
+    \subsubsection{The behavior of the virus outside the host}
+      \par The behavior of COVID-19 when it lives outside the host is the crux at this time and there is no concrete answer to this problem. For that reason, we should research more to scale down the limits of virus life span outside the host in order to take appropriate action to a public place when there was a person who has tested positively entered that location.
+    \subsubsection{Features/Services that our app should offer}
+      \par Conducting further surveys/interviews to get community opinion about our application and do they agree to use our system once the users, businesses, and Government cooperation model has been applied. We will also check if the users find the support during quarantine is helpful and essential or not.
+
+  \subsection{Further Iterations}
+    \subsubsection{Conceptual Design}
+      \par For the conceptual design, in the next few weeks, we will keep updating the high-level description of the system according to what direction the app will take as our team further justify the app. Also, we will keep refining the design guidelines as we keep working on prototyping and doing user evaluation, as well as deciding on our approach towards privacy concerns.
+    \subsubsection{Prototype}
+      \vspace{0.5cm}
+      \par \textbf{Card Sorting}
+      \vspace{0.5cm}
+      \par This process will be used to create high-level customizable feature segments or components to accommodate different interfaces to observe different user behavior. It provides adaptions for usability testing which could collect more accurate and genuine perception from user feedbacks.
+      \vspace{0.5cm}
+      \par \textbf{Additional Features}
+      \vspace{0.5cm}
+      \begin{itemize}
+        \item QR Code scanner.
+        \item Recommending Top Rating Health and Fitness App for better mental and physical health.
+      \end{itemize}
+
+  \subsection{Identified risks that might threaten the success of the project:}
+    \subsubsection{The number of users installs the app:}
+      \par The application that our team proposed provided benefits for users as much as we can, including notifying users when they have been in close contact with the infectious person or have been to places that are not safe as well as providing medical help and supporting during the lockdown. This app could be most efficient and effective when there is cooperation among users, they need to turn on the Bluetooth and scan for the QR Code when entering a place. All things that they have been done are not only for their health but also for the public health community.
+    \subsubsection{Supports from the Government:}
+      \par For those who were at the place that an infectious person has been, they need to get advice from the Department of Health to know exactly what to do next, whether quarantine at home or go to the hospital to virus testing, which depends on how severe the situation is.
+      \par For open space areas, the Government should close down or strictly monitor the activities of people to ensure that they adhere to essential rules such as Social distancing or not gathering with many people. Without collaboration with the Government, the project would be more difficult to get the job done successfully.
+
+    
 
