@@ -1,5 +1,9 @@
 # By-product files
 *.aux
+*.bbl
+*.bcf
+*.blg
+*.run.xml
 *.log
 *.pdf
 *.out
