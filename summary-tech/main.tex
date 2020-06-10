@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper]{article}
+
+
+% === MARGINS ===
+\usepackage[margin=0.75in]{geometry}
+
+
+% === INDENTATION ===
+\usepackage{indentfirst}
+
+
+% === HEADINGS ===
+\setcounter{secnumdepth}{4}
+\newcommand{\hi}{\section}
+\newcommand{\hii}{\subsection}
+\newcommand{\hiii}{\subsubsection}
+\newcommand{\hiiiBEGIN}[1]{\subsubsection \begin{enumerate}}
+\newcommand{\hiiiEND}{\end{enumerate}}
+\newcommand{\hiv}{\item\textbf}
+
+
+% === TEXT ===
+% Bold, italic, underlined text
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\ti}[1]{\textit{#1}}
+\newcommand{\tbi}[1]{\textbf{\textit{#1}}}
+\newcommand{\tu}[1]{\underline{#1}}
+\newcommand{\tbu}[1]{\textbf{\underline{#1}}}
+\newcommand{\smf}[1]{\small #1 \normalsize}
+\newenvironment{smfont}{\small}{\normalsize}
+
+
+% === FONT ===
+\renewcommand{\familydefault}{\sfdefault}
+
+
+% === ENUMERATE ===
+\usepackage[shortlabels]{enumitem}
+% Usage: \begin{enumerate}[a.] or [a)] or [(A)] etc.
+
+
+% === REFERENCE ===
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes,xpatch} % recommended
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=blue
+}
+
+\usepackage[
+    backend=biber,
+    style=ieee,
+]{biblatex}
+
+\addbibresource{ref.bib}
+
+% Document-wise macros
+\newcommand{\TheShield}{\textbf{TheShield}{}}
+\newcommand{\BlueTrace}{\textbf{BlueTrace}{}}
+\newcommand{\DPTTT}{\textbf{DP3T}{}}
+\newcommand{\ExposureNotification}{\textbf{ExposureNotification}{}}
+
+\begin{document}
+
+  \input{summary}
+  \printbibliography
+
+\end{document}
