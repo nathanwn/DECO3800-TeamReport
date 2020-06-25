@@ -2,42 +2,49 @@
   \subsection{System Concept Statement}
 
     \subsubsection{One Sentence Problem Statement}
-      \par Design and develop an application to be installed on a mobile device that does contact tracing and facilitates the user-business-government model, and at the same time provide them with genuine information of the pandemic, help them make better decisions, provide them with a channel to reach out to organizations providing support during lockdown, and to communicate with the health department in case they are potentially infected.
+      \par Design and develop a mobile application that does pandemic contact tracing, guide the users on what to do next in case they have been exposed and provide further support during quarantine/lockdown.
 
     \subsubsection{High-level Description of the System}
       \par The system will:
       \begin{itemize}
-        \item conduct contact tracing - this includes:
+        \item Conduct contact tracing:
         \begin{itemize}
-          \item tracking who the user has been in contact within the last 14 days
-          \item tracking the public places that the user has been to within the last 14 days
-          \item notifying people who has come in close contact with a confirmed case so that they can deliberately contact the health department for testing
+          \item logging who the user has been in contact within the last 14 days
+          \item logging the public places that the user has been to within the last 14 days in such a manner so that the user-business-government model is achieved
+          \item notifying people who has come in close contact with a confirmed case so that they can voluntarily provide information about their current health status and contact the health department for testing
         \end{itemize}
-        \item provide a platform that can support the user-business-government cooperation model, by tracking people who have entered a public business place
-        \item provide a platform for the health authorities to inform the community about the latest updates of the disease, how to stay safe, what to do in case of an emergency, etc.
-        \item provide a platform for the health authorities to extract further information from people who are potentially infected with the virus
-        \item provide a fun and educational experience for the user to learn about the pandemic situation and help them make better decision with pandemic simulations
-        \item provide a platform for organizations to provide support during lockdown for people in need
+        \item Guide the users step by step on what actions they should take once they have been notified of them possibly being exposed to a confirmed case.
+        \item Supply the users with support services during quarantine/lockdown, including:
+          \begin{itemize}
+            \item Listing hotline numbers for health support
+            \item Recommending resources that the users can utilize for health or recreational purposes
+            \item Being an official channel for users to receive creditable information and register for care packages from organizations or the government.
+          \end{itemize}
       \end{itemize}
 
     \subsubsection{Interaction Paradigms}
       \begin{itemize}
-        \item Mobile: the application is installed on mobile phone
-        \item Ubiquitous computing: when doing contact tracing, the system works in the background and does not require any interaction with the user
+        \item Mobile: the application is installed on mobile devices
+        \item Ubiquitous computing: Personal close contacts are logged automatically by the application. The user only needs to enable their Bluetooth services.
       \end{itemize}
 
     \subsubsection{Interaction Modes}
       \begin{itemize}
         \item \textbf{Exploring \& Browsing}:
           \begin{itemize}
-            \item The user gets to know more about the pandemic situation through information provided by the health authorities.
-            \item The user is advised with recreational activities during lockdown.
-            \item The user gets to know organizations that provide support during lockdown. 
+            \item Notify the users if they have possibly been exposed to the virus through contacting with a confirmed case.
+            \item Guide the users on what they should do so as to protect themselves, others and get tested if necessary.
+            \item The user is recommended with mental and physical health improving or recreational resources to assist them throughout the quarantine/lockdown period.
           \end{itemize}
         \item \textbf{Instructing}:
           \begin{itemize}
-            \item The users need to fill in a Q\&A form within the app when the health authorities needs to extract further information from them \textbf{in case they have already come into close contact with a confirmed case}.
-            \item Having functionalities to support the elderly and the disabled people.
+            \item Enable Bluetooth services to activate the contact tracing mechanism
+            \item Open the camera from within the application to scan location logging QR codes
+            \item Link to websites for registering for care packages or financial support salaries
+          \end{itemize}
+        \item \textbf{Conversing}:
+          \begin{itemize}
+            \item The users can voluntarily choose to fill out a Q&A form after they have been notified of the risk being exposed in order to provide the health departments with further information.
           \end{itemize}
       \end{itemize}
     
@@ -67,3 +74,42 @@
         \item The system have to protect user from exposing their data to potential threats.
         \item The system will be open-sourced so that security issues can be detected as soon as possible.
       \end{itemize}
+
+  \subsection{System Requirements}
+    \subsubsection{Contact Tracing}
+      \begin{itemize}
+        \item The application utilizes only Bluetooth to conduct contact tracing in terms of personal encounters. As for location logging, to avoid involving any GPS services, we have decided to adopt QR codes scanning at specific public places as an alternative. The QR codes scanning implementation also makes sure that the government - business - user cooperation model is satified.
+        \item Between Centralized and Decentralized contact tracing, our application complies with the Decentralized approach to maximize the amount of user privacy protection we can offer, thus, facilitating the users' trust in our system.
+        \item Methods to guarantee users' privacy:
+          \begin{itemize}
+            \item Locally-generated Random Ephemeral User IDs: The ID attached with each user changes every two hours to ensure that no IDs can be exploited to trace back to a particular user.
+            \item Voluntary Upload of Contact Tracing data: Although the application automatically notifies the users whether or not they have been exposed to the virus, it is entirely dependent on the users to take any actions that may follow, including uploading their contact tracing logging list up to the governmental centralized servers.
+          \end{itemize}
+        \item Only when a person is confirmed positive with the virus will he/she be given the permission to upload his/her contact tracing logging list up to the servers. The rationale behind this restriction is to ensure that no false positive cases are recorded into the system.
+      \end{itemize}
+    
+      \subsubsection{User Guidance}
+        \begin{itemize}
+          \item In case the user has been notified that he/she is at risk of being infected with the virus:
+            \begin{itemize}
+              \item Ask the user to voluntarily fill out a Q&A form consisting of multiple-choice and closed-ended questions that will assist the health organizations to extract further information from the user.
+              \item Provide the user with step by step instructions on what should be done in order to protect himself/herself and the community.
+              \item List country-specific emergency and health support hotlines in case the user may need them.
+            \end{itemize}
+        \end{itemize}
+    
+      \subsubsection{User Support}
+        \begin{itemize}
+          \item The official announcements from the government or any authorized organizations and departments delivered to the users should be timely, adequate and up-to-date.
+          \item The application should offer a wide range of support packages that suit the needs of many different groups of users, for example, students, office employees, and construction workers.
+          \item The application should only deliver crucial information such as virus spreading prevention techniques and useful resources that help the users stay healthy physically and mentally during quarantine/lockdown.
+        \end{itemize}
+    
+  \subsection{Application workflow example}
+    \begin{itemize}
+      \item The user IDs are randomly generated locally on each user’s phone.
+      \item When Alice and Bob come into close distance, the two mobile phones will exchange user IDs: Alice’s phone will save a copy of Bob’s ID and vice versa.
+      \item Later, Bob is diagnosed and confirmed by the health department to have COVID-19.
+      \item Bob is authorized by the health department to upload his “list” of close contact to the server. It is more like a “blackbox” than a list: no one can extract user IDs from it. When the app on Alice’s phone has downloaded the “blackbox” B from the server, it will do comparison locally like this: For each ID idi of Alice, the operation B(idi) will either output true if the idi is in the blackbox, or false if idi is not in the blackbox. If any ID of Alice is in the blackbox, the app will notify her.
+    \end{itemize}      
+    
