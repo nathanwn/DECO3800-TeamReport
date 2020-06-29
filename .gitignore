@@ -5,7 +5,6 @@
 *.blg
 *.run.xml
 *.log
-*.pdf
 *.out
 *.toc
 *.dvi
