@@ -1,44 +1,35 @@
 \section{Plan}
-  \subsection{How to answer the identified questions:}
-    \subsubsection{Privacy}
-      \par For users to compromise, we must come up with a solution that can protect their privacy while having enough data and resources to function properly.
-      \par To protect user privacy, there are two different processes that need to be taken care of: gathering data and storing data. Applying the wrong approach will not only discourage the use of the app but also leave the system at risk of security threats.
-      \par For the time being, we will do some more research on how similar applications gather and store data (not just at a high level, but rather a bit closer to the implementation side), then compare between the pros and cons of each approach. We will also look for some standard privacy guidelines of the software industry, and later come up with a guideline for our system. The intention is to help decide which approach will be the best fit for our application given all the criteria.
-      \par Take a closer look and get a better understanding of the functionality of COVIDSafe application \parencite{CovidSafe} in order to improve our system.
-    \subsubsection{Accuracy}
-      \par The application that our group proposing currently can solve the problem of accuracy by combining two existing technologies, including Bluetooth signal and QR Code. However, for open space areas such as parks, beaches, the solution of using the QR Code seems to be infeasible.
-      \par There are two ways that we took into account in order to find the solution for this problem in the next iteration:
-        \begin{itemize}
-          \item Researching and discussing more to get a better solution.
-          \item Open space areas are owned by the Government. For that reason, the Government should close unessential places such as beaches or monitored these places with high frequency to make sure that people adhere to Social Distancing.
-        \end{itemize}
-    \subsubsection{The behavior of the virus outside the host}
-      \par The behavior of COVID-19 when it lives outside the host is the crux at this time and there is no concrete answer to this problem. For that reason, we should research more to scale down the limits of virus life span outside the host in order to take appropriate action to a public place when there was a person who has tested positively entered that location.
-    \subsubsection{Features/Services that our app should offer}
-      \par Conducting further surveys/interviews to get community opinion about our application and do they agree to use our system once the users, businesses, and Government cooperation model has been applied. We will also check if the users find the support during quarantine is helpful and essential or not.
-
-  \subsection{Further Iterations}
-    \subsubsection{Conceptual Design}
-      \par For the conceptual design, in the next few weeks, we will keep updating the high-level description of the system according to what direction the app will take as our team further justify the app. Also, we will keep refining the design guidelines as we keep working on prototyping and doing user evaluation, as well as deciding on our approach towards privacy concerns.
-    \subsubsection{Prototype}
-      \vspace{0.5cm}
-      \par \textbf{Card Sorting}
-      \vspace{0.5cm}
-      \par This process will be used to create high-level customizable feature segments or components to accommodate different interfaces to observe different user behavior. It provides adaptions for usability testing which could collect more accurate and genuine perception from user feedbacks.
-      \vspace{0.5cm}
-      \par \textbf{Additional Features}
-      \vspace{0.5cm}
+  \subsection{The  process  and  progress  of  our  team  during  the semester}
+    \par During the semester, we tried to answer questions about:
       \begin{itemize}
-        \item QR Code scanner.
-        \item Recommending Top Rating Health and Fitness App for better mental and physical health.
+        \item Privacy
+        \item Accuracy
+        \item The behavior of the virus outside the host
+        \item Building trust with the users
       \end{itemize}
-
-  \subsection{Identified risks that might threaten the success of the project:}
-    \subsubsection{The number of users installs the app:}
-      \par The application that our team proposed provided benefits for users as much as we can, including notifying users when they have been in close contact with the infectious person or have been to places that are not safe as well as providing medical help and supporting during the lockdown. This app could be most efficient and effective when there is cooperation among users, they need to turn on the Bluetooth and scan for the QR Code when entering a place. All things that they have been done are not only for their health but also for the public health community.
-    \subsubsection{Supports from the Government:}
-      \par For those who were at the place that an infectious person has been, they need to get advice from the Department of Health to know exactly what to do next, whether quarantine at home or go to the hospital to virus testing, which depends on how severe the situation is.
-      \par For open space areas, the Government should close down or strictly monitor the activities of people to ensure that they adhere to essential rules such as Social distancing or not gathering with many people. Without collaboration with the Government, the project would be more difficult to get the job done successfully.
-
     
+    \subsubsection{Privacy}
+      \begin{itemize}
+        \item \textbf{Identify the tracking methods}:
+          \par At the early stage, the approach was to minimize the pandemic was using GPS, which seemed to be an effective solution since the location of users and the time stamp could be stored in the system. However, after discussions, there are some weaknesses of GPSto apply to the project that we might take into account. The first one is user privacy. The success of this project depends mostly on cooperation among users. When people know that they are required to turn on GPS and their location is tracked all the time, it is not comfortable for them to use the application.
+          \par As a result, Bluetooth signals would be a better option to preserve user privacy at the highest level and ensure the accuracy of contact distance. However, GPS was still kept to reduce the spreading of the virus in public places. Our team then decided to eliminate the usage of GPS in the project and came up with the idea of the Bluetooth signal generator which could be installed in public places such as supermarkets, restaurants, etc. This generator would connect to Bluetooth signals from customers’ mobile devices in that area. The data then be encrypted and we could know where the user who has been positively tested for the virus went by. With this method, we can both track the interaction between users and the locations. \textit{However}, we realized that the Bluetooth connection is a two-way connection which means that this kind of generator cannot work perfectly as we expected when there were \textit{many people access to a place at the same time}.
+          \par Finally, we agreed to \textit{combine Bluetooth and QR code} in the system to achieve the highest efficiency. With QR code, when entered a place, people had to in the queue with social distancing applied, each person needed to scan the QR Code before accessing that place.
+        \item \textbf{Researching on how the data would be collected}:
+          \par The privacy issue does not solely depend on the  method of collecting user data,butit also relates to the way of how the data is collected and distributed among the devices. Based on the conducted survey,it is not assured that the users would use the system comfortably when knowing their data was constantly uploaded and accessed by the Government even though it was  encrypted. For  the  time  being,  we  have  already  done  more  research  on  how  similar applications (BlueTrace, DP3T and ExposureNotification) gather and store data (not just at a high level, but rather a bit closer to the implementation side), then compared between the pros and cons of each approach. The intention is to help decide which approach will be the best fit for our application given all the criteria. As a result, our team has come to the agreement that the data should be structured and collected in a decentralized manner.
+      \end{itemize}
+    
+    \subsubsection{Accuracy}
+      \par With the approach ofusing GPS for tracking how the virus spread in the first iteration,besidesthe privacy issue, it also posed difficulties to the accuracy of the system, especially in publicplaces or multi-floor buildings. On the other hand, by combining two methods of collecting data, including Bluetooth signal and QR Code, the application that our group proposed possibly maximized the accuracy in terms of tracing people contacts and the locations they went by.
+    
+    \subsubsection{The behavior of the virus outside the host}
+      \par The behavior of COVID-19 when it lives outside the host is the crux at this timeand there is no concrete answer to this problem. To address this problem and minimize the effects of the virus  outside  the  host  in  public  places, our  team  has  determined  that the  data  in  the centralized servershouldbe accessed by the Health authorities to get instructions from them deciding what should next.
+    
+    \subsubsection{Building trust withthe users}
+      \par To build trust from the users as well as helping them to use the system comfortably, there are threethings  that  our  team  has implemented.  Firstly,conductingsurveys/interviews  to  get what features people care the most and what they concern about the contact tracing application. Secondly, researching why the other  contact  tracing  application  is  not  widely  used  by the residents.  Last  but  not  least, supporting users  during  lockdown  by providing  them support package,announcements  from  the  Government,and  recommended  applications for  a healthier mental and physical lifestyle.
 
+  \subsection{Identified  risks  that  might  threaten  the  success  of  the project}
+    \subsubsection{The number of users installs the app}
+      \par The application that our team proposed provided benefits for users as much as we can, including notifying users when they have been in close contact with the infectious person or have been to places that are not safe as well as providing medical help and supporting during the lockdown. This app could be most efficient and effective when there is cooperation among users by turning on the Bluetooth and scanning for the QR Code when entering a place.
+
+    \subsubsection{Supports from the Health authority}
+      \par For those who were at the place that an infectious person has been, they need to get advice from the Department of Health to know exactly what to do next, whether quarantine at home or go for the virus testing, which depends on how severe the situation is. Since our team does not have the expertise  in  medical  guideline as  well  as  adequate  facilities  to  set  up  a  server  for  data centralization, that is why we need supports from the Health authority to address those problems.
